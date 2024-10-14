@@ -13,7 +13,7 @@ if (process.env.mode === 'production') {
     app.use(cors()); // Cho phép tất cả các miền trong môi trường sản xuất
 } else {
     app.use(cors({
-        origin: ["http://localhost:5173", "http://localhost:3000"], // Cho phép chỉ miền localhost:5174
+        origin: ["http://localhost:5173", "http://localhost:3000","https://news-backend-mu.vercel.app"], // Cho phép chỉ miền localhost:5174
         methods: ['GET', 'POST', 'PUT', 'DELETE'], // Thêm phương thức nếu cần
         allowedHeaders: ['Content-Type', 'Authorization'] // Cho phép các headers tùy chỉnh
     }));
