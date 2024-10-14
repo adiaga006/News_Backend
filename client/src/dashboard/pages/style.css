@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
+
+:root {
+  --font-style: "Nunito Sans", sans-serif;
+}
+
+.body-login {
+    background: #131315;
+    font-family: var(--font-style);
+    height: 100vh;
+    display: flex;
+    justify-content: centers;
+    align-items: center;
+}
+
+.login-heading {
+    font-size: 28px; /* Increase font size for the heading */
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .show-password-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fff; /* Set color to white */
+    cursor: pointer;
+  }
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #242026;
+  box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
+  border-radius: 10px;
+}
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+.login-box .user-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.login-box .user-box input {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: relative;
+  left: 0;
+  top: -60px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.user-box input:not(:placeholder-shown) ~ label {
+    top: -85px;
+    left: 0;  /* Vị trí của label khi input được điền hoặc có focus */
+    font-size: 16px;
+    color: #fff;
+  } 
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -85px;
+    left: 0;  /* Vị trí của label khi input được điền hoặc có focus */
+    font-size: 20px;
+    color: #8F7CEC;
+}
+
+#submit {
+  padding: 10px 20px;
+  color: #cbbddb;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  border: 1px solid #8f7cec;
+  margin: auto;
+}
+
+#submit:hover {
+  background: #8f7cec;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #8f7cec, 0 0 25px #8f7cec, 0 0 50px #8f7cec,
+    0 0 100px #8f7cec;
+}
+
+.button-form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+#register {
+  font-size: 16px;
+  text-decoration: none;
+  color: #cbbddb;
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+#register a {
+  margin: auto;
+  color: #8f7cec;
+  text-decoration: none;
+}
+input:-webkit-autofill {
+    border: none !important;
+    -webkit-text-fill-color: #fff !important;
+    -webkit-box-shadow: 0 0 0px 1000px #242026 inset !important;
+    font-family: var(--font-style) !important;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: #fff;
+}
+input:-webkit-autofill:hover{
+    border: none !important;
+    -webkit-text-fill-color: #fff !important;
+    -webkit-box-shadow: 0 0 0px 1000px #242026 inset !important;
+    font-family: var(--font-style) !important;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: #fff;
+}
+input:-webkit-autofill:focus {
+    border: none !important;
+    -webkit-text-fill-color: #fff !important;
+    -webkit-box-shadow: 0 0 0px 1000px #242026 inset !important;
+    font-family: var(--font-style) !important;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: #fff;
+}
