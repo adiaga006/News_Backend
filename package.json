@@ -28,6 +28,7 @@
     "mongoose": "^8.0.3",
     "new_portal": "file:",
     "prop-types": "^15.8.1",
+    "tailwindcss": "^3.4.13",
     "vite": "^5.4.8"
   },
   "devDependencies": {
