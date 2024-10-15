@@ -137,19 +137,21 @@ class newsController {
     }
 
     news_search = async (req, res) => {
-        const { value } = req.query
+        const { value } = req.query;
         try {
             const news = await newsModel.find({
                 status: 'active',
-                $text: {
-                    $search: value
+                title: { 
+                    $regex: value, 
+                    $options: 'i' // 'i' for case insensitive search
                 }
-            })
-            return res.status(201).json({ news })
+            });
+            return res.status(201).json({ news });
         } catch (error) {
-            return res.status(500).json({ message: 'Internal server error' })
+            return res.status(500).json({ message: 'Internal server error' });
         }
-    }
+    };
+    
 
     add_images = async (req, res) => {
 
